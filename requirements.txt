@@ -505,9 +505,10 @@ python-multipart==0.0.21
     # via mcp
 python-ulid==3.1.0
     # via redisvl
-pywin32==311
+#if using macOS comment out pywin32 and pywinpty, which are Windows-specific dependencies
+#pywin32==311
     # via mcp
-pywinpty==3.0.2
+#pywinpty==3.0.2
     # via
     #   jupyter-server
     #   jupyter-server-terminals

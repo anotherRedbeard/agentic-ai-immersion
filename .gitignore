@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+run_rbac.sh
 
 # =============================================================================
 # 🔐 SENSITIVE FILES - NEVER COMMIT

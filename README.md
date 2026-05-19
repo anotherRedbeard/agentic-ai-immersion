@@ -161,7 +161,7 @@ AZURE_AI_SEARCH_ENDPOINT=https://your-search.search.windows.net
 
 1. **Create Microsoft Foundry Resource** — [Azure Portal](https://portal.azure.com/#create/Microsoft.CognitiveServicesAIFoundry)
 2. **Deploy Models** — `gpt-4o`, `gpt-4o-mini`, `text-embedding-3-large`
-3. **Connect Services** — Azure AI Search, Bing Search, Application Insights
+3. **Connect Services** — Azure AI Search, Bing Search, Application Insights, Storage Account
 
 For detailed setup instructions, see [Microsoft Foundry Documentation](https://learn.microsoft.com/en-us/azure/ai-foundry/).
 
@@ -198,9 +198,9 @@ Assign the following roles based on the notebooks you plan to run. Each role spe
 $USER_PRINCIPAL_ID = (az ad signed-in-user show --query id -o tsv)
 
 # Get resource scopes (replace with your values)
-$PROJECT_SCOPE = "/subscriptions/<sub-id>/resourceGroups/<rg>/providers/Microsoft.MachineLearningServices/workspaces/<project>"
-$STORAGE_SCOPE = "/subscriptions/<sub-id>/resourceGroups/<rg>/providers/Microsoft.Storage/storageAccounts/<storage>"
-$SEARCH_SCOPE = "/subscriptions/<sub-id>/resourceGroups/<rg>/providers/Microsoft.Search/searchServices/<search>"
+$PROJECT_SCOPE = "/subscriptions/<sub-id>/resourceGroups/<rg>/providers/Microsoft.CognitiveServices/accounts/agentic-ai-immersion-foundry/projects/<project-name>"
+$STORAGE_SCOPE = "/subscriptions/<sub-id>/resourceGroups/<rg>/providers/Microsoft.Storage/storageAccounts/<storage-account-name>"
+$SEARCH_SCOPE = "/subscriptions/<sub-id>/resourceGroups/<rg>/providers/Microsoft.Search/searchServices/<ai-search-name>"
 
 # ═══════════════════════════════════════════════════════════════
 # USER ROLES
